@@ -1,6 +1,7 @@
 # Description: Boxstarter Script
 # Author: Microsoft
 # Common settings for web development with NodeJS
+# For Gary!
 
 Disable-UAC
 
@@ -26,12 +27,12 @@ executeScript "SystemConfiguration.ps1";
 executeScript "FileExplorerSettings.ps1";
 executeScript "RemoveDefaultApps.ps1";
 executeScript "CommonDevTools.ps1";
-executeScript "WSL.ps1";
+# executeScript "WSL.ps1";
 executeScript "Browsers.ps1";
 
 #--- Tools ---
-code --install-extension msjsdiag.debugger-for-chrome
-code --install-extension msjsdiag.debugger-for-edge
+# code --install-extension msjsdiag.debugger-for-chrome
+# code --install-extension msjsdiag.debugger-for-edge
 
 #--- Tools ---
 choco install -y nodejs-lts # Node.js LTS, Recommended for most users
