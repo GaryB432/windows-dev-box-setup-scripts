@@ -1,7 +1,12 @@
 #--- Configuring Windows properties ---
 #--- Windows Features ---
 # Show hidden files, Show protected OS files, Show file extensions
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
+
+$key = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+Set-ItemProperty $key Hidden 1
+Set-ItemProperty $key HideFileExt 0
+Set-ItemProperty $key ShowSuperHidden 1
+Stop-Process -processname explorer
 
 #--- File Explorer Settings ---
 # will expand explorer to the actual folder you're in
