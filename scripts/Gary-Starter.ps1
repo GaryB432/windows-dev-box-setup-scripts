@@ -6,10 +6,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 choco install -y vscode
 choco install -y git --package-parameters="'/GitAndUnixToolsOnPath /WindowsTerminal /DefaultBranchName:master /Editor:VisualStudioCode'"
+choco install -y notepadplusplus
+choco install -y discord
+choco install -y nvm
+# choco install -y nodejs-lts
 choco install -y python
 choco install -y 7zip.install
 choco install -y sysinternals
-choco install -y notepadplusplus
 
 # will expand explorer to the actual folder you're in
 Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneExpandToCurrentFolder -Value 1
